@@ -1,17 +1,7 @@
-#!/usr/bin/env python3
-
-# Standard library imports
-
-# Remote library imports
-from flask import request
+from flask import request, make_response, session, jsonify, abort
 from flask_restful import Resource
-
-# Local imports
 from config import app, db, api
-# Add your model imports
-
-
-# Views go here!
+from models import User, Recipe, Cuisine
 
 @app.route('/')
 def index():
